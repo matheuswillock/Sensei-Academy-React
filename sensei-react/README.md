@@ -1,4 +1,4 @@
-## Pacotes que estáo sendo utilizados:
+## Pacotes que estão sendo utilizados:
 
 - react-router-dom;
 - styled-components;

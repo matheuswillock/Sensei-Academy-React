@@ -1,0 +1,225 @@
+#page-landing {
+  background: var(--color-background);
+}
+
+/* ----header-content---------- */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  width: 6rem;
+  height: 6rem;
+  transition: opacity 0.2s;
+}
+
+.logo-icon:hover {
+  opacity: 0.6;
+}
+
+a.login-btn {
+  font: 600 1.6rem "Encode Sans";
+
+  margin-bottom: 0.6rem;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 0.8rem;
+
+  height: 3.2rem;
+  width: 8.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-login);
+
+  background-color: var(--color-button);
+
+  text-decoration: none;
+}
+
+a.login-btn:hover {
+  background: var(--color-button-give-classes);
+}
+
+.header-content a.login-btn img {
+  margin-left: 0.6rem;
+  width: 2.4rem;
+}
+
+/* ----Logo---------- */
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+  font: 800 8.6rem/5.8rem "Encode Sans";
+  margin-top: 6.8rem;
+  color: var(--color-title);
+}
+
+.logo-container p {
+  font: 200 4.8rem "Encode Sans";
+  margin-right: 4.4rem;
+  color: var(--color-title);
+}
+
+/* ----Image-Principal---------- */
+
+.image-principal {
+  width: 70%;
+  padding: 2rem 2rem 0;
+  display: flex;
+  margin: 3rem auto;
+}
+
+/* ----Footer-Landing---------- */
+
+/* ----Buttons---------- */
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem 0;
+}
+
+.buttons-container a {
+  width: 25rem;
+  height: 8.5rem;
+
+  margin-right: 1.8rem;
+  border-radius: 0.8rem;
+
+  font: 700 2.8rem "Encode Sans";
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--color-button-text);
+
+  transition: background 0.4s;
+  /* Para o hover dos buttons serem mais suaves */
+}
+
+.buttons-container a.study {
+  color: var(--color-button-study);
+  border: 4px solid var(--color-button-study);
+  margin-left: 3%;
+}
+
+.buttons-container a.study:hover {
+  background: var(--color-button-study);
+  color: var(--color-button-text);
+}
+
+.buttons-container a.give-classes {
+  background: var(--color-button-give-classes);
+}
+
+.buttons-container a.give-classes:hover {
+  background: var(--color-transition-give-classes);
+}
+
+/* ----comments---------- */
+
+.comments {
+  font: 200 1.8rem "Poppins";
+
+  color: var(--color-comments);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 4.8rem;
+}
+
+/* ----Responsive---------- */
+@media (max-width: 699px) {
+  :root {
+    font-size: 40%;
+    /*Modificar as medidas rem*/
+  }
+
+  #container {
+    margin: 0 auto;
+  }
+
+  .logo-container {
+    margin-top: 8.6rem;
+  }
+}
+
+@media (max-width: 1099px) {
+  :root {
+    font-size: 60%;
+    /*Modificar as medidas rem*/
+  }
+
+  #container {
+    max-width: fit-content;
+  }
+}
+
+@media (min-width: 1100px) {
+  #page-landing #container {
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "title title image"
+      "button button texting";
+  }
+
+  .header-content {
+    grid-area: header;
+    margin-bottom: auto;
+  }
+
+  .logo-container {
+    grid-area: title;
+    text-align: center;
+    align-self: center;
+    width: 68.6rem;
+    height: 0%;
+  }
+
+  .logo-container h2 {
+    font-size: 9.6rem;
+    margin: 0 0 0 7.4rem;
+  }
+
+  .logo-container p {
+    font-size: 5.8rem;
+    margin: 0 0 0 0;
+  }
+
+  .image-principal {
+    grid-area: image;
+    margin: -4.8rem 0 -5.8rem 3.6rem;
+    padding: 0;
+    width: 40.8rem;
+  }
+
+  .buttons-container {
+    grid-area: button;
+    align-self: center;
+    width: 55rem;
+  }
+
+  .comments {
+    grid-area: texting;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+}
