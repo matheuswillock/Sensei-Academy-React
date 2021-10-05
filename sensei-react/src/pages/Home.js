@@ -1,30 +1,50 @@
-import logoHome from '../assets/images/logo-home.svg';
+import React from "react";
+import { Link, useHistory } from 'react-router-dom';
 import login from '../assets/images/login.svg';
-import jirayaSensei from '../assets/images/jiraya-sensei.svg';;
+import jirayaSensei from '../assets/images/jiraya-sensei.svg';
+import LogoHomeImg from '../assets/images/logo-home.svg';
 
-function Home() {
+// import LogoHome from '../components/LogoHome'
+
+import '../assets/Style/Main.css';
+import '../assets/Style/partials/PageLanding.css';
+
+export function Home() {
+
+  const history = useHistory();
+
+  function navegateToLogin() {
+    history.push('/login')
+  }
+
+  function navegateToSearch() {
+    // history.push('/search')
+    history.push('/search')
+  }
+
   return (
 
     <div id="page-landing">
       <div id="container">
 
         <div class="header-content" >
-          <a href="">
-            <img src={logoHome} alt="Home imagem" />
-          </a>
+          
+          <Link to="/">
+            <img src={ LogoHomeImg } alt="Logo Home"/>  
+          </Link>
 
-          <a class="login-btn" href="./login.html">            
+          <Link onClick={navegateToLogin} class="login-btn" >            
             
             <p>
-                Login 
+              Login 
             </p>
 
             <img 
-                src={login} 
-                alt="Entrar"
+              src={login} 
+              alt="Entrar"
             />
             
-          </a>
+          </Link>
         </div>
 
         <div className="logo-container">
@@ -45,16 +65,15 @@ function Home() {
           alt="Jiraya Sensei" 
         />   
 
-
         <div className="buttons-container">
 
-        <a className="study" href="./page-search.html">
-          Estudar
-        </a>
+          <a href="Search" onClick={navegateToSearch} className="study" >
+            Estudar
+          </a>
 
-        <a className="give-classes" href="./give-classes.html">
-          Ensinar
-        </a>
+          <a className="give-classes" href="./give-classes.html">
+            Ensinar
+          </a>
 
         </div> 
 
@@ -73,5 +92,4 @@ function Home() {
   );
 }
 
-
-export default Home;
+// export default Home;

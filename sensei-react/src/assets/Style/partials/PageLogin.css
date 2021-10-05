@@ -3,18 +3,19 @@
   height: 100vh;
 }
 
-body {
+#container {
   background: linear-gradient(45deg, #f3f3f3, #c7c7c7) no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main.content {
+.content {
+  margin: 10rem auto;
   background: white;
-  max-width: 350px;
+  max-width: 46rem;
   min-height: 40vh;
-  padding: 2.4rem;
+  padding: 5.4rem 5.4rem 2.6rem;
   box-shadow: 0.5rem 0.5rem 1.5rem rgb(0 0 0 / 60%);
   border-radius: 0.8rem;
 }
@@ -31,7 +32,7 @@ form span {
 form img {
   width: 48%;
   align-self: center;
-  margin: 0 auto 1rem;
+  margin: 1rem auto 3rem;
 }
 
 form {
@@ -45,9 +46,16 @@ form .input-field {
   border-radius: 0.8rem;
 }
 
-form .input-field input {
+form input {
   outline-color: #39ae76;
-  border: 0;
+
+  border: solid 0.3rem rgba(122, 120, 120, 0.699);
+  border-radius: 0.4rem;
+  margin: 0.18rem 2rem;
+  text-align: center;
+
+  font-family: "Poppins";
+  font-weight: 200;
 }
 
 #input-field-username {

@@ -29,14 +29,14 @@
 
   text-decoration: none;
 
-  font: 300 1.6rem/1.6rem 'Poppins';
+  font: 300 1.6rem/1.6rem "Poppins";
 
-  color: var(--color-name-perfil)
-
+  color: var(--color-name-perfil);
 }
 
 .page-header .header-perfil-content img {
-  height: 8rem;
+  height: 8.4rem;
+  margin-top: 2.8rem;
 }
 
 .page-header .top-bar-container a {
@@ -51,7 +51,7 @@
 
 .page-header .header-content {
   width: 90%;
-  margin: 3.2rem auto;
+  margin: 10.2rem auto 0.8rem;
   position: relative;
 }
 
@@ -129,7 +129,7 @@
 /* ----Main -> article -> header ---------- */
 
 #page-search .senseis-item {
-  background-color: var(--color-box-base);
+  background-color: var(--color-box-sensei);
 
   border: 0;
   border-radius: 0.8rem;

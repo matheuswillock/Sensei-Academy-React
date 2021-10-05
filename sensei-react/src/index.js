@@ -6,7 +6,6 @@ import App from './App';
 
 ReactDOM.render(
   // who, what and where will be rendered;
-  
   <React.StrictMode>
     <App />
   </React.StrictMode>,

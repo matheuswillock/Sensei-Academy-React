@@ -1,13 +1,22 @@
 // imports
-import './assets/Style/main.css';
-import './assets/Style/partials/page-landing.css';
-import Home from './pages/Home'
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import { Home } from './pages/Home'
+import { Login } from './pages/Login';
+import { Search } from './pages/Search';
 
 function App() {
   return (
-    // code JSX
-    <Home />
+
+    <BrowserRouter>
+      <Route path="/" exact component={ Home } />
+      <Route path="/login" component={ Login } />
+      <Route path="/search" component={ Search } />
+    </BrowserRouter>
+
   );
+
 }
 
 export default App;
